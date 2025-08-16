@@ -21,9 +21,9 @@ It is designed to save teachers/students time by directly fetching marks from Go
 marks/
 ├── extract.py              # Fetches marks from Google Classroom → gcr_marks.txt
 ├── main.py                 # Maps marks into Excel and highlights missing matches
-├── gcr_marks.txt           # Auto-generated JSON of marks
-├── section A.xlsx          # Input Excel file with RollNo & Name
-├── output_with_marks.xlsx  # Final output with mapped marks
+├── gcr_marks.txt           # Auto-generated JSON of marks (would be generated when extract.py is executed)
+├── section A.xlsx          # Input Excel file with RollNo & Name as columns (your input file)
+├── output_with_marks.xlsx  # Final output with mapped marks (would be generated when main.py is executed)
 ├── credentials.json        # Google API credentials (not included)
 └── README.md               # Documentation
 ```
@@ -33,8 +33,8 @@ marks/
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-username/gcr-marks-extractor.git
-cd gcr-marks-extractor
+git clone https://github.com/NNoorFatima/classroom2excel.git
+cd classroom2excel
 ```
 ### Create Virtual Environment (optional but recommended)
 ```bash
@@ -68,9 +68,15 @@ python extract.py
 - Script saves marks to gcr_marks.txt
 
 Step 2: Update Excel
+Make sure to **replace section A.xlsx in main.py** with your input file.
 Make sure your Excel (section A.xlsx) has columns:
 - RollNo
 - Name
+
+Example of section A.xlsx sheet
+
+![Screenshot](example.png)
+
 
 Then run:
 ```bash 
